@@ -1,0 +1,25 @@
+.preparation-note{display:flex;gap:16px;align-items:center;padding:12px 16px;border:1px solid var(--border);border-radius:12px;margin:0 0 12px;flex:none}.preparation-note strong{font-weight:600}.preparation-note p{margin-top:4px;color:var(--muted);line-height:20px}.preparation-note .btn{flex:none}.compact-note{align-items:flex-start;margin-bottom:16px}.compact-note p{font-size:12px;line-height:20px}.prepared-note{display:flex;align-items:center;gap:8px;color:var(--muted);margin:0 0 12px;min-height:28px;flex:none}.prepared-note img{width:16px;height:16px}.filter-chip{display:flex;align-items:center;gap:4px;min-height:40px;border:1px solid var(--border);border-radius:12px;background:white;max-width:380px}.filter-chip.applied{border-color:var(--accent)}.filter-main{display:flex;gap:8px;padding:9px 12px;text-align:left;min-width:0}.filter-main span{color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.filter-clear{padding:4px 8px 4px 0;display:flex;align-items:center;flex:none}.filter-clear img{width:16px;height:16px}.filter-panel{flex-wrap:wrap}.filter-popover{display:flex;flex-direction:column;gap:12px;padding:8px;min-width:300px}.filter-popover .field-label{margin-bottom:0}.filter-popover input.text-field{display:block;margin-top:6px}.filter-popover .row{justify-content:flex-end}.status-options{display:flex;flex-direction:column;gap:12px;padding:4px 0}.group-pagination{height:44px;background:var(--bg)}.group-pagination .row{position:sticky;left:0;max-width:700px;justify-content:flex-end}.group-pagination button{width:32px;height:32px;border-radius:8px}.group-pagination button:hover{background:white}.bulk-tooltip{position:fixed;z-index:80;width:340px;border-radius:12px;padding:8px 12px;background:black;color:white;font-size:14px;line-height:20px;pointer-events:none}.element-facts{margin:8px 0;display:flex;flex-direction:column;gap:4px;font-size:12px;line-height:20px}.element-facts>div{display:flex;gap:12px}.element-facts dt{width:96px;flex:none;color:var(--muted)}.element-facts dd{margin:0;color:var(--text)}.element-facts dd strong{display:inline;margin:0}.stage-dates{display:block;margin-top:6px;font-size:12px;color:var(--muted)}.reason-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;width:100%;padding:16px 0;text-align:left;border-bottom:1px solid var(--border)}.reason-heading b{color:var(--muted);font-weight:400;margin-left:4px}.reason-heading img{width:16px;height:16px;transform:rotate(-90deg)}.reason-heading[aria-expanded=true] img{transform:none}.duplicate-notice{margin-bottom:16px}.duplicate-notice p{margin:8px 0}.duplicate-notice .radio-line{line-height:20px;padding:4px 0}.bulk .new-action{font-weight:600}.bulk .optional-action{display:none}.modal-content .element-search{margin-top:12px}
+.group-button{width:min(100%,calc(100vw - 320px))}
+
+/* Table viewport: 44px headers, 66px rows, 44px group load-more from the source. */
+.pagination{height:48px;min-height:48px;gap:8px;padding:8px 0 0;margin:0}
+.pagination button,.pagination .page-range{width:40px;height:40px;min-width:40px;flex:none;border-radius:20px;display:inline-flex;align-items:center;justify-content:center;color:var(--muted)}
+.pagination button.active{background:var(--bg);color:var(--text)}
+.pagination button:hover:not(:disabled){background:var(--bg)}
+.pagination button img{width:16px;height:16px}
+.pagination .page-prev img{transform:rotate(180deg)}
+.pagination .page-size{margin-left:16px;white-space:nowrap}
+.has-selection .pagination{margin-bottom:0}
+.has-selection .table-scroll{margin-bottom:64px}
+.group-pagination{height:44px;background:white;padding:0!important}
+.group-more{position:sticky;left:0;display:flex;align-items:center;gap:4px;height:44px;padding:12px 0;color:var(--muted);border-radius:4px}
+.group-more img{width:16px;height:16px}
+
+/* Vertical scrolling belongs to the document; the table only scrolls horizontally. */
+body{overflow-y:auto;overflow-x:auto}
+.workspace{height:auto;min-height:100vh}
+.page{min-height:calc(100vh - 80px);flex:1;overflow:visible}
+.table-scroll{flex:none;height:auto;max-height:none;overflow-x:auto;overflow-y:hidden}
+.has-selection .table-scroll{margin-bottom:0}
+.page.has-selection{padding-bottom:88px}
+body:has(.page.has-selection) .bulk{bottom:24px}

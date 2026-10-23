@@ -1,2 +1,9 @@
-# skillgrid-assigned-plan-elements
-Desktop Skillgrid prototype: bulk editing and adding elements in assigned adaptation plans
+# Skillgrid — массовое изменение элементов планов
+
+[Открыть прототип](https://yulia405.github.io/skillgrid-assigned-plan-elements/)
+
+Интерактивный desktop-прототип: группировка планов, фильтры, массовая замена и добавление элементов, проверка сроков и дублей. Демонстрационные данные. Изменения не отправляются в LMS.
+
+Рассчитан на экран от 1280 px. Серверная часть и установка зависимостей не требуются.
+
+Шрифт Inter распространяется по SIL Open Font License, текст лицензии — assets/OFL.txt.

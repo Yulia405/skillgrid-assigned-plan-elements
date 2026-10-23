@@ -1,0 +1,7 @@
+export const ACTIVE_STATUSES=['created','started','on_review','returned'];
+export const STATUS_LABELS={created:'Не начат',started:'В работе',on_review:'На согласовании',returned:'Возвращён на доработку',finished:'Завершён',failed:'Не завершён успешно',cancelled:'Отменён'};
+export const TEMPLATES=[{id:'t1',name:'Адаптация сотрудника производства'},{id:'t2',name:'Адаптация офисного сотрудника'},{id:'t3',name:'Адаптация руководителя'}];
+export const addDays=(date,days)=>{const d=new Date(date+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+Number(days));return d.toISOString().slice(0,10);};
+export function filterPlans(rows,{query='',statuses=[],startFrom='',startTo='',finishFrom='',finishTo=''}={}){return rows.filter(p=>(!query||`${p.name} ${p.template}`.toLocaleLowerCase().includes(query.toLocaleLowerCase()))&&(!statuses.length||statuses.includes(p.statusCode))&&(!startFrom||p.start>=startFrom)&&(!startTo||p.start<=startTo)&&(!finishFrom||p.finish>=finishFrom)&&(!finishTo||p.finish<=finishTo));}
+export function groupPlans(rows,field='template'){const key=p=>field==='template'?p.template:field==='department'?p.department:field==='position'?p.position:field==='status'?p.status:field==='leader'?'Елена Иванова':'Адаптация';const map=new Map();for(const p of rows){const k=key(p);if(!map.has(k))map.set(k,[]);map.get(k).push(p);}return [...map].map(([name,plans],i)=>({id:field+'-'+i,name,plans}));}
+export const validRange=(from,to)=>!from||!to||from<=to;
