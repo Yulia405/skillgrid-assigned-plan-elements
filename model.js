@@ -1,5 +1,5 @@
 export const LIMIT=100, PAGE_SIZE=20;
-import {TEMPLATES,STATUS_LABELS,addDays} from './list-model.js';
+import {TEMPLATES,STATUS_LABELS,addDays} from './list-model.js?v=10';
 export const TEMPLATE='Адаптация сотрудника производства';
 export const elements=[
  {id:'t1/s1/e1',type:'Курс',name:'Охрана труда — 2025',stage:'Первая неделя',material:501},
