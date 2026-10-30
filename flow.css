@@ -22,3 +22,8 @@ body.bulk-flow-open{overflow:hidden}
 .btn.destructive,.btn.destructive:hover{background:var(--danger);border-color:var(--danger);color:white}
 
 .flow-edit-context{margin-top:16px}.flow-edit-context>summary{cursor:pointer;color:var(--accent);line-height:24px}.flow-add-settings .flow-field select{width:100%}
+
+/* One stable dialog frame throughout a bulk operation. Existing 620px modal variant. */
+html{scrollbar-gutter:stable}
+[data-bulk-flow]>.modal,[data-bulk-flow]>.modal.flow-wide{width:620px;max-width:calc(100vw - 48px);height:calc(100dvh - 48px);max-height:calc(100dvh - 48px)}
+[data-bulk-flow] .modal-content{flex:1;scrollbar-gutter:stable;overscroll-behavior:contain}
